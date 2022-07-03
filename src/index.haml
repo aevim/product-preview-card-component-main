@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+%html{:lang => 'UTF-8'}
+  %head
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }
+    %meta{:name => 'description', :content => 'another frontend mentor project' }
+    %meta{:name	=> 'author', :content => 'aevim' }
+    %link{:rel => 'icon', :type => 'image/png', :sizes => '32x32', :href => 'public/imgs/favicon-32x32.png' }
+    %link{:rel => 'stylesheet', :href => 'public/css/style.css' }
+    %title Frontend Mentor | Product preview card component
+  %body
+    %main.product
+      %header.product__header 
+        %h3.header__text.u-opaque perfume
+        %h1.header__main-text.u-font Gabrielle Essence Eau De Parfum
+        %p.header__paragraph.u-opaque A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+
+      %section.product__price
+        %h1.price__discounted.u-font $149.99
+        %h3.price__undiscounted.u-opaque $169.99
+        %a.price__buy Add to Cart
+
+      %footer.author.u-opaque 
+        Challenge by 
+        %a{:href => 'https://www.frontendmentor.io?ref=challenge', :target => '_blank' } Frontend Mentor.
+        Coded by 
+        %a{:href => 'https://github.com/aevim', :target => '_blank' } aevim.
+
+
+

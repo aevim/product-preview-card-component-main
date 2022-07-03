@@ -1,0 +1,16 @@
+{
+  "name": "product-preview-card-component-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev-sass": "sass -w src/sass/main.sass:public/css/style.css",
+    "haml-dev": "haml src/index.haml index.html"
+  },
+  "repository": "https://github.com/aevim/product-preview-card-component-main.git",
+  "author": "aevim <aedigo12@protonmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "haml": "^0.4.3",
+    "sass": "^1.53.0"
+  }
+}

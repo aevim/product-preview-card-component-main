@@ -1,0 +1,162 @@
+@use "base" as b
+
+* 
+  box-sizing: border-box
+
+html
+  display: flex
+  justify-content: center
+
+body 
+  background-color: b.$cream 
+  font-family: 'Montserrat', sans-serif
+  font-size: 14px
+  max-width: 375px
+
+a 
+  cursor: pointer
+  text-decoration: none
+
+.u-font 
+  font-family: 'Fraunces', serif
+  font-size: 30px
+
+.u-opaque
+  color: b.$darkGrayishBlue
+
+.product::before 
+  background: url(../imgs/image-product-mobile.jpg) no-repeat 0 0
+  background-size: 100%
+  border-radius: 10px 10px 0 0
+  content: ""
+  height: 240px 
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+.product 
+  background-color: b.$white
+  border-radius: 10px
+  margin: 28px 16px
+  padding: 240px 20px 0 20px
+  position: relative
+  &__header 
+    padding: 20px 0
+    .header 
+      &__text
+        letter-spacing: 5px
+        font-size: 12px
+        margin-bottom: 20px
+        margin-bottom: 14px
+        text-transform: uppercase
+      &__main-text
+        color: b.$veryDarkBlue
+        font-size: 28px
+
+      &__paragraph
+        font-size: 13.4px
+        line-height: 1.8
+        margin: 14px 0
+  &__price
+      align-items: center
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      grid-template-areas: "discounted price" "button button"
+      .price
+        &__discounted
+          color: b.$darkCyan
+          grid-area: discounted
+        &__undiscounted
+          grid-area: price
+          text-decoration: line-through
+        &__buy::before
+          background: url('../imgs/icon-cart.svg') no-repeat 0 0
+          background-size: 100%
+          content: ""
+          height: 100%
+          left: 28%
+          position: absolute
+          top: 29%
+          width: 15px
+        &__buy
+          background-color: b.$darkCyan
+          border-radius: 10px
+          color: b.$white
+          font-weight: 700
+          grid-area: button
+          margin: 6px 0
+          padding: 16px 0
+          position: relative
+          text-align: center
+          &:hover 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0)
+
+.author
+  padding: 20px 0
+  text-align: center
+  & a
+    &:hover 
+      color: b.$darkCyan !important
+    &:visited
+      color: b.$veryDarkBlue 
+    &:link
+      color: orange
+
+// responsive layout
+@media only screen and (max-width: 375px)
+  .product::before 
+    background: url(../imgs/image-product-mobile.jpg) no-repeat 0 0
+    background-size: 400px
+    border-radius: 10px 10px 0 0
+    content: ""
+    height: 340px 
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+@media only screen and (min-width: 1000px)
+  html
+    height: 100%
+    align-items: center
+
+  body
+    max-width: 375*2px
+  .product::before
+    background: url(../imgs/image-product-desktop.jpg) no-repeat 0 0
+    background-size: 100%
+    background-position: left top
+    border-radius: 15px 0 0 15px
+    height: 100%
+    width: 50%
+
+  .product
+    border-radius: 15px
+    height: 538px
+    padding: 15px 40px 0 120px
+    &__header
+      padding: 0
+      @include b.move-right
+      .header
+        &__text
+          font-size: 16px
+          padding: 20px 0
+        &__main-text
+          font-size: 36px
+          padding-bottom: 14px
+        &__paragraph
+          font-size: 17px
+          line-height: 1.5
+    &__price
+      @include b.move-right
+      .price
+        &__discounted
+          font-size: 36px
+          margin-right: 26px
+        &__buy
+          margin-top: 16px
+    .author
+      font-size: 12px
+      @include b.move-right
