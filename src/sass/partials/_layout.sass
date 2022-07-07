@@ -52,8 +52,6 @@ a
         text-transform: uppercase
       &__main-text
         color: b.$veryDarkBlue
-        font-size: 28px
-
       &__paragraph
         font-size: 13.4px
         line-height: 1.8
@@ -105,17 +103,9 @@ a
       color: orange
 
 // responsive layout
-@media only screen and (max-width: 375px)
+@media only screen and (max-width: 374px)
   .product::before 
-    background: url(../imgs/image-product-mobile.jpg) no-repeat 0 0
-    background-size: 400px
-    border-radius: 10px 10px 0 0
-    content: ""
-    height: 340px 
-    left: 0
-    position: absolute
-    top: 0
-    width: 100%
+    background-size: 340px
 
 @media only screen and (min-width: 1000px)
   html
