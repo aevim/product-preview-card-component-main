@@ -176,7 +176,7 @@ a {
 
 @media only screen and (max-width: 374px) {
   .product::before {
-    background-size: 340px;
+    background-size: 345px;
   }
 }
 @media only screen and (min-width: 1000px) {

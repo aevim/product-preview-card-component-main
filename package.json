@@ -12,5 +12,6 @@
   "devDependencies": {
     "haml": "^0.4.3",
     "sass": "^1.53.0"
-  }
+  },
+  "dependencies": {}
 }
